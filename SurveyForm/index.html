@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1 id="title">DEVELOPER SURVEY</h1>
+    <p id="description">What makes you tick? Share it quick</p>
+
+    <div id="form-container">
+
+        <form id="survey-form">
+
+            <div id="name-container container" class="container">
+                <label for="name" id="name-label">Name</label>
+                <input class="input-field" type="text" id="name" placeholder="Enter your name" required name="name">
+            </div>
+           
+            <div id="email-container" class="container">
+                <label for="email" id="email-label">Email</label>
+                <input class="input-field" type="email" id="email" placeholder="abc123@gmail.com" required>
+            </div>
+            
+            <div id="number-container" class="container">
+                <label for="number" id="number-label">Number</label>
+                <input class="input-field" type="number" name="number" id="number" placeholder="1234567890" min="4" max="10">
+            </div>
+            
+        
+            <div id="select-container" class="container">
+                <label for="dropdown">What describes you the best?</label>
+
+                <select name="dropdown" id="dropdown">
+                    <option value="Student">Student</option>
+                    <option value="Freelance">Freelance</option>
+                    <option value="Software Engineer">Software Engineer</option>
+                    <option value="Software Developer">Software Developer</option>
+                    <option value="Web Developer">Web Developer</option>
+                    <option value="Web Designer">Web Designer</option>
+                    <option value="Web3 Engineer">Web3 Engineer</option>
+                    <option value="others">Others</option>
+                </select>
+            </div>
+
+            <div class="container">
+                <p class="section-heading">Gender</p>
+                <div class="container-content">
+                    <label for="male"><input type="radio" name="gender" id="male" value="male"> Male</label>
+                
+                    <label for="female"><input type="radio" name="gender" id="female" value="female">  Female</label>
+
+                    <label for="NAN"><input type="radio" name="gender" id="NAN" value="NAN"> Prefer not to say</label>
+                </div>
+                
+            </div>
+                
+            <div id="language-container" class="contianer">
+                <p class="section-heading">Languages you know?</p>
+                <div class="container-content">
+
+                <label for="java">
+                    <input type="checkbox" name="lang" id="java" value="java">
+                    Java
+                </label>
+
+                <label for="C/C++">
+                    <input type="checkbox" name="lang" value="C/C++" id="C/C++">
+                    C/C++
+                </label>
+
+                <label for="python">
+                    <input type="checkbox" name="lang" value="python" id="python">
+                    Python
+                </label>
+
+                <label for="javascript">
+                    <input type="checkbox" name="lang" value="javascript" id="javascript">
+                    Javascript
+                </label>
+
+                <label for="ruby">
+                    <input type="checkbox" name="lang" value="ruby" id="ruby">
+                    Ruby
+                </label>
+
+                <label for="rust">
+                    <input type="checkbox" name="lang" value="rust" id="rust">
+                    Rust
+                </label>
+
+                <label for="others">
+                    <input type="checkbox" name="lang" value="others" id="others">
+                    Others
+                </label>
+
+                </div>
+            </div>
+            
+    
+            <div class="container" id="know-more-section">
+                <textarea name="feedback" id="" placeholder="Write more about your self"></textarea>
+            </div>
+       
+            <div id="submit">
+                <button type="submit">Submit</button>
+            </div>
+    
+        </form>
+    </div>
+   
+</body>
+</html>
