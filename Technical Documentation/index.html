@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Documentation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="theme-toggle">
+        <button id="toggle-theme">☀️</button>
+    </div>
+    <div class="hamburger-menu" id="hamburger-menu">☰</div>
+    <nav id="navbar">
+        <header>JavaScript Documentation</header>
+        <a class="nav-link" href="#Introduction" onclick="showSection('Introduction'); closeSidebar()">Introduction</a>
+        <a class="nav-link" href="#Syntax" onclick="showSection('Syntax'); closeSidebar()">Syntax</a>
+        <a class="nav-link" href="#Variables" onclick="showSection('Variables'); closeSidebar()">Variables</a>
+        <a class="nav-link" href="#Functions" onclick="showSection('Functions'); closeSidebar()">Functions</a>
+        <a class="nav-link" href="#Objects" onclick="showSection('Objects'); closeSidebar()">Objects</a>
+        <a class="nav-link" href="#Arrays" onclick="showSection('Arrays'); closeSidebar()">Arrays</a>
+        <a class="nav-link" href="#Loops" onclick="showSection('Loops'); closeSidebar()">Loops</a>
+        <a class="nav-link" href="#Events" onclick="showSection('Events'); closeSidebar()">Events</a>
+        <a class="nav-link" href="#Promises" onclick="showSection('Promises'); closeSidebar()">Promises</a>
+        <a class="nav-link" href="#Async_Await" onclick="showSection('Async_Await'); closeSidebar()">Async Await</a>
+        <a class="nav-link" href="#DOM_Manipulation" onclick="showSection('DOM_Manipulation'); closeSidebar()">DOM Manipulation</a>
+        <a class="nav-link" href="#Fetch_API" onclick="showSection('Fetch_API'); closeSidebar()">Fetch API</a>
+        <a class="nav-link" href="#ES6_Features" onclick="showSection('ES6_Features'); closeSidebar()">ES6 Features</a>
+
+        <footer>
+            <p><a href="https://www.linkedin.com/in/mrsahiljaiswal/">Made with 🩷 by Sahil</a></p>
+        </footer>
+    </nav>
+    <main id="main-doc">
+        <section id="Introduction" class="main-section">
+            <header>Introduction</header>
+            <p>JavaScript is a versatile programming language primarily used for web development. It allows you to create dynamic and interactive web pages. JavaScript is a high-level, interpreted scripting language that conforms to the <span class="highlight">ECMAScript</span> specification. It is a multi-paradigm language, supporting event-driven, functional, and imperative programming styles. JavaScript is one of the core technologies of the World Wide Web, alongside HTML and CSS. As of 2021, 97.6% of all websites use JavaScript on the client side for web page behavior, often incorporating third-party libraries.</p>
+            <pre><code>console.log('Hello, world!');
+</code></pre>
+        </section>
+        <section id="Syntax" class="main-section">
+            <header>Syntax</header>
+            <p>JavaScript syntax is the set of rules that define a correctly structured JavaScript program. JavaScript programs are made up of statements with appropriate syntax. Each statement is an instruction to be executed by the browser. JavaScript statements are composed of values, operators, expressions, keywords, and comments. JavaScript is case-sensitive and uses the Unicode character set.</p>
+            <pre><code>let x = 10;
+let y = 20;
+let sum = x + y;
+console.log(sum); 
+</code></pre>
+            <p>JavaScript uses semicolons to separate statements. However, semicolons are optional, and JavaScript will automatically insert them where it thinks they are needed. It is a good practice to use semicolons to avoid potential issues. JavaScript also supports comments, which are ignored by the browser. Comments can be single-line or multi-line.</p>
+            <pre><code>// Single-line comment
+/* Multi-line
+   comment */
+</code></pre>
+        </section>
+        <section id="Variables" class="main-section">
+            <header>Variables</header>
+            <p>Variables are containers for storing data values. In JavaScript, you can declare variables using <span class="highlight">var</span>, <span class="highlight">let</span>, or <span class="highlight">const</span>. The <span class="highlight">var</span> keyword is used to declare a variable that can be re-assigned. The <span class="highlight">let</span> keyword is used to declare a block-scoped variable that can also be re-assigned. The <span class="highlight">const</span> keyword is used to declare a block-scoped variable that cannot be re-assigned.</p>
+            <pre><code>let name = 'John';
+const age = 30;
+var isStudent = true;
+</code></pre>
+            <p>Variables can store different types of data, such as numbers, strings, booleans, objects, and arrays. JavaScript is a dynamically typed language, meaning that variables can hold values of any data type without specifying the type. Variables can be declared without a value, in which case they will have the value <span class="highlight">undefined</span>.</p>
+            <pre><code>let x;
+console.log(x); 
+x = 10;
+console.log(x); 
+</code></pre>
+        </section>
+        <section id="Functions" class="main-section">
+            <header>Functions</header>
+            <p>Functions are blocks of code designed to perform a particular task. They are executed when "called" (invoked). Functions can take parameters and return a value. Functions are defined using the <span class="highlight">function</span> keyword, followed by the function name, a list of parameters enclosed in parentheses, and the function body enclosed in curly braces.</p>
+            <pre><code>function greet(name) {
+    return 'Hello, ' + name;
+}
+console.log(greet('Alice')); 
+</code></pre>
+            <p>Functions can be called multiple times with different arguments. Functions can also be assigned to variables, passed as arguments to other functions, and returned from other functions. JavaScript supports anonymous functions, which are functions without a name. Anonymous functions are often used as arguments to other functions or as immediately invoked function expressions (IIFE).</p>
+            <pre><code>let greet = function(name) {
+    return 'Hello, ' + name;
+};
+console.log(greet('Bob')); 
+
+(function() {
+    console.log('IIFE executed');
+})();
+</code></pre>
+        </section>
+        <section id="Objects" class="main-section">
+            <header>Objects</header>
+            <p>Objects are collections of properties, and a property is an association between a name (or key) and a value. Objects are used to store related data and functionality. In JavaScript, objects are created using curly braces, with properties defined as key-value pairs. Properties can be accessed using dot notation or bracket notation.</p>
+            <pre><code>let person = {
+    firstName: 'John',
+    lastName: 'Doe',
+    age: 25,
+    fullName: function() {
+        return this.firstName + ' ' + this.lastName;
+    }
+};
+console.log(person.fullName()); 
+</code></pre>
+            <p>Objects can contain other objects, arrays, and functions. Functions defined within an object are called methods. The <span class="highlight">this</span> keyword refers to the current object and is used to access properties and methods within the object. Objects can be created using object literals, the <span class="highlight">new Object()</span> syntax, or constructor functions.</p>
+            <pre><code>let obj1 = {}; 
+let obj2 = new Object(); 
+
+function Person(firstName, lastName, age) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.age = age;
+}
+let person1 = new Person('Alice', 'Smith', 30);
+console.log(person1.firstName); 
+</code></pre>
+        </section>
+        <section id="Arrays" class="main-section">
+            <header>Arrays</header>
+            <p>Arrays are used to store multiple values in a single variable. They are a special type of object in JavaScript. Arrays are created using square brackets, with elements separated by commas. Elements can be accessed using their index, which starts at 0. Arrays have a length property that returns the number of elements in the array.</p>
+            <pre><code>let fruits = ['Apple', 'Banana', 'Cherry'];
+console.log(fruits[0]); 
+console.log(fruits.length); 
+</code></pre>
+            <p>Arrays can contain elements of different data types, including numbers, strings, objects, and other arrays. Arrays have built-in methods for adding, removing, and manipulating elements. Common array methods include <span class="highlight">push()</span>, <span class="highlight">pop()</span>, <span class="highlight">shift()</span>, <span class="highlight">unshift()</span>, <span class="highlight">splice()</span>, <span class="highlight">slice()</span>, <span class="highlight">concat()</span>, <span class="highlight">forEach()</span>, <span class="highlight">map()</span>, <span class="highlight">filter()</span>, and <span class="highlight">reduce()</span>.</p>
+            <pre><code>let numbers = [1, 2, 3, 4, 5];
+numbers.push(6); 
+console.log(numbers); 
+numbers.pop(); 
+console.log(numbers); 
+numbers.shift(); 
+console.log(numbers); 
+numbers.unshift(1); 
+console.log(numbers); 
+</code></pre>
+        </section>
+        <section id="Loops" class="main-section">
+            <header>Loops</header>
+            <p>Loops are used to execute a block of code repeatedly. JavaScript supports different types of loops such as for, while, and do-while. The <span class="highlight">for</span> loop is used to iterate over a block of code a specified number of times. The <span class="highlight">while</span> loop is used to execute a block of code as long as a specified condition is true. The <span class="highlight">do-while</span> loop is similar to the <span class="highlight">while</span> loop, but it executes the block of code at least once before checking the condition.</p>
+            <pre><code>for (let i = 0; i < 5; i++) {
+    console.log(i);
+}
+
+let j = 0;
+while (j < 5) {
+    console.log(j);
+    j++;
+}
+
+let k = 0;
+do {
+    console.log(k);
+    k++;
+} while (k < 5);
+</code></pre>
+            <p>JavaScript also supports the <span class="highlight">for...in</span> loop, which is used to iterate over the properties of an object, and the <span class="highlight">for...of</span> loop, which is used to iterate over the values of an iterable object, such as an array or a string.</p>
+            <pre><code>let person = { firstName: 'John', lastName: 'Doe', age: 25 };
+for (let key in person) {
+    console.log(key + ': ' + person[key]);
+}
+
+let fruits = ['Apple', 'Banana', 'Cherry'];
+for (let fruit of fruits) {
+    console.log(fruit);
+}
+</code></pre>
+        </section>
+        <section id="Events" class="main-section">
+            <header>Events</header>
+            <p>Events are actions that occur in the browser, such as clicks, key presses, or mouse movements. JavaScript can be used to handle these events. Event handling is done using event listeners, which are functions that are called when an event occurs. Event listeners can be added to HTML elements using the <span class="highlight">addEventListener()</span> method.</p>
+            <pre><code>document.getElementById('myButton').addEventListener('click', function() {
+    alert('Button clicked!');
+});
+</code></pre>
+            <p>Event listeners can be used to handle different types of events, such as <span class="highlight">click</span>, <span class="highlight">mouseover</span>, <span class="highlight">keydown</span>, and <span class="highlight">submit</span>. Event listeners can also be removed using the <span class="highlight">removeEventListener()</span> method. Event objects are passed to event listeners and contain information about the event, such as the target element, the type of event, and the coordinates of the mouse pointer.</p>
+            <pre><code>document.getElementById('myElement').addEventListener('mouseover', function(event) {
+    console.log('Mouse over:', event.target);
+});
+document.addEventListener('keydown', function(event) {
+    console.log('Key pressed:', event.key);
+});
+document.getElementById('myForm').addEventListener('submit', function(event) {
+    event.preventDefault(); 
+    console.log('Form submitted');
+});
+</code></pre>
+        </section>
+        <section id="Promises" class="main-section">
+            <header>Promises</header>
+            <p>Promises are used to handle asynchronous operations in JavaScript. They represent a value that may be available now, in the future, or never. A promise is an object that represents the eventual completion (or failure) of an asynchronous operation and its resulting value. Promises have three states: pending, fulfilled, and rejected. A promise is created using the <span class="highlight">Promise</span> constructor, which takes a function with two arguments: <span class="highlight">resolve</span> and <span class="highlight">reject</span>.</p>
+            <pre><code>let promise = new Promise((resolve, reject) => {
+    let success = true;
+    if (success) {
+        resolve('Operation successful');
+    } else {
+        reject('Operation failed');
+    }
+});
+promise.then(result => {
+    console.log(result);
+}).catch(error => {
+    console.log(error);
+});
+</code></pre>
+            <p>Promises can be chained using the <span class="highlight">then()</span> method, which takes two arguments: a callback function for the fulfilled state and a callback function for the rejected state. The <span class="highlight">catch()</span> method is used to handle errors. The <span class="highlight">finally()</span> method is used to execute code regardless of the promise's outcome. Promises can be combined using the <span class="highlight">Promise.all()</span> and <span class="highlight">Promise.race()</span> methods.</p>
+            <pre><code>let promise1 = new Promise((resolve, reject) => {
+    setTimeout(() => resolve('Promise 1 resolved'), 1000);
+});
+let promise2 = new Promise((resolve, reject) => {
+    setTimeout(() => resolve('Promise 2 resolved'), 2000);
+});
+Promise.all([promise1, promise2]).then(results => {
+    console.log(results); 
+}).catch(error => {
+    console.log(error);
+});
+</code></pre>
+        </section>
+        <section id="Async_Await" class="main-section">
+            <header>Async Await</header>
+            <p>Async/Await is a syntactic sugar built on top of promises. It allows you to write asynchronous code in a more synchronous fashion. The <span class="highlight">async</span> keyword is used to declare an asynchronous function, which returns a promise. The <span class="highlight">await</span> keyword is used to wait for a promise to be resolved or rejected. The <span class="highlight">await</span> keyword can only be used inside an <span class="highlight">async</span> function.</p>
+            <pre><code>async function fetchData() {
+    try {
+        let response = await fetch('https://api.example.com/data');
+        let data = await response.json();
+        console.log(data);
+    } catch (error) {
+        console.log('Error:', error);
+    }
+}
+fetchData();
+</code></pre>
+            <p>Async functions can contain multiple <span class="highlight">await</span> expressions, which are executed sequentially. The <span class="highlight">await</span> keyword pauses the execution of the async function until the promise is resolved or rejected. If the promise is resolved, the <span class="highlight">await</span> expression returns the resolved value. If the promise is rejected, the <span class="highlight">await</span> expression throws an error, which can be caught using a <span class="highlight">try...catch</span> block.</p>
+            <pre><code>async function fetchMultipleData() {
+    try {
+        let response1 = await fetch('https://api.example.com/data1');
+        let data1 = await response1.json();
+        console.log(data1);
+
+        let response2 = await fetch('https://api.example.com/data2');
+        let data2 = await response2.json();
+        console.log(data2);
+    } catch (error) {
+        console.log('Error:', error);
+    }
+}
+fetchMultipleData();
+</code></pre>
+        </section>
+        <section id="DOM_Manipulation" class="main-section">
+            <header>DOM Manipulation</header>
+            <p>The Document Object Model (DOM) is a programming interface for HTML and XML documents. It represents the page so that programs can change the document structure, style, and content. The DOM is a tree-like structure, where each node represents an element, attribute, or text. JavaScript can be used to manipulate the DOM by selecting elements, modifying their attributes, and changing their content.</p>
+            <pre><code>document.getElementById('myElement').textContent = 'Hello, DOM!';
+</code></pre>
+            <p>Elements can be selected using methods such as <span class="highlight">getElementById()</span>, <span class="highlight">getElementsByClassName()</span>, <span class="highlight">getElementsByTagName()</span>, <span class="highlight">querySelector()</span>, and <span class="highlight">querySelectorAll()</span>. Attributes can be modified using methods such as <span class="highlight">setAttribute()</span>, <span class="highlight">getAttribute()</span>, and <span class="highlight">removeAttribute()</span>. Content can be changed using properties such as <span class="highlight">textContent</span>, <span class="highlight">innerHTML</span>, and <span class="highlight">outerHTML</span>.</p>
+            <pre><code>let element = document.querySelector('.myClass');
+element.setAttribute('data-custom', 'value');
+console.log(element.getAttribute('data-custom')); 
+element.removeAttribute('data-custom');
+element.textContent = 'New content';
+element.innerHTML = '<strong>Bold content</strong>';
+</code></pre>
+        </section>
+        <section id="Fetch_API" class="main-section">
+            <header>Fetch API</header>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+
+            <p>The Fetch API provides a modern way to make network requests. It is more powerful and flexible than the older XMLHttpRequest. The Fetch API is based on promises and provides a more powerful and flexible feature set. The <span class="highlight">fetch()</span> function takes a URL as an argument and returns a promise that resolves to the response object representing the response to the request.</p>
+            <pre><code>fetch('https://api.example.com/data')
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.log('Error:', error));
+</code></pre>
+            <p>The response object contains information about the response, such as the status code, headers, and body. The body can be read using methods such as <span class="highlight">text()</span>, <span class="highlight">json()</span>, <span class="highlight">blob()</span>, and <span class="highlight">arrayBuffer()</span>. The <span class="highlight">fetch()</span> function can also take an optional second argument, which is an options object that allows you to specify the request method, headers, body, and other settings.</p>
+            <pre><code>fetch('https://api.example.com/data', {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ key: 'value' })
+})
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.log('Error:', error));
+</code></pre>
+        </section>
+        <section id="ES6_Features" class="main-section">
+            <header>ES6 Features</header>
+            <p>ES6, also known as ECMAScript 2015, introduced many new features to JavaScript, such as let and const, arrow functions, template literals, and more. The <span class="highlight">let</span> and <span class="highlight">const</span> keywords are used to declare block-scoped variables. Arrow functions provide a shorter syntax for writing function expressions and do not have their own <span class="highlight">this</span> value. Template literals allow you to create multi-line strings and embed expressions using backticks and the <span class="highlight">${}</span> syntax.</p>
+            <pre><code>let name = 'John';
+const age = 30;
+let greeting = Hello, my name is ${name} and I am ${age} years old.;
+console.log(greeting); 
+</code></pre>
+            <p>ES6 also introduced other features such as default parameters, rest and spread operators, destructuring assignment, classes, modules, and more. Default parameters allow you to specify default values for function parameters. The rest operator allows you to represent an indefinite number of arguments as an array. The spread operator allows you to expand an array or object into individual elements. Destructuring assignment allows you to extract values from arrays or objects into variables.</p>
+            <pre><code>function greet(name = 'Guest') {
+    return Hello, ${name};
+}
+console.log(greet()); 
+console.log(greet('Alice')); 
+
+function sum(...numbers) {
+    return numbers.reduce((total, num) => total + num, 0);
+}
+console.log(sum(1, 2, 3)); 
+
+let arr1 = [1, 2, 3];
+let arr2 = [...arr1, 4, 5, 6];
+console.log(arr2); 
+
+let person = { firstName: 'John', lastName: 'Doe', age: 25 };
+let { firstName, lastName } = person;
+console.log(firstName); 
+console.log(lastName); 
+</code></pre>
+        </section>
+    </main>
+    <script>
+        function showSection(id) {
+            document.querySelectorAll('.main-section').forEach(section => {
+                section.style.display = 'none';
+            });
+            document.getElementById(id).style.display = 'block';
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function closeSidebar() {
+            const navbar = document.getElementById('navbar');
+            navbar.classList.remove('open');
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            showSection('Introduction');
+        });
+
+        document.getElementById('toggle-theme').addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            document.getElementById('toggle-theme').textContent = 
+                document.body.classList.contains('dark-mode') ? '🌙' : '☀️';
+        });
+
+        const hamburgerMenu = document.getElementById('hamburger-menu');
+        const navbar = document.getElementById('navbar');
+        hamburgerMenu.addEventListener('click', () => {
+            navbar.classList.toggle('open');
+        });
+    </script>
+</body>
+</html>
