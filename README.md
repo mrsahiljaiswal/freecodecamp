@@ -16,7 +16,7 @@ This repository contains projects completed as part of the **freeCodeCamp Respon
    📌 A technical documentation page showcasing responsive design principles.
 
 3. **Portfolio Page**  
-   🔗 [Live Site](https://sahil-porfolio.netlify.app)  
+   🔗 [Live Site](https://sahilj-portfolio.netlify.app/)  
    📌 Personal portfolio page featuring projects and skills.
 
 4. **Restaurant Page**  
